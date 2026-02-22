@@ -71,7 +71,17 @@ Home Assistant discovery enable
 
 Secrets are not committed (sdkconfig is ignored).
 
+## Setup (First Time)
+
+Select your target and generate configuration:
+
+```bash
+idf.py set-target esp32c6
+idf.py reconfigure
+idf.py menuconfig
+
 Build & Flash
+
 idf.py build
 idf.py flash monitor
 Home Assistant

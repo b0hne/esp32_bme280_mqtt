@@ -1,0 +1,10 @@
+cat > sdkconfig.defaults <<'EOF'
+CONFIG_MQTT_URI="mqtt://broker.local"
+CONFIG_MQTT_STATE_TOPIC="sensors/bme280"
+CONFIG_HA_DISCOVERY_ENABLE=y
+CONFIG_HA_DISCOVERY_PREFIX="homeassistant"
+EOF
+
+git add sdkconfig.defaults
+git commit -m "Add sdkconfig.defaults"
+git push
