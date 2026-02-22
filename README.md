@@ -93,14 +93,4 @@ components/net_mqtt/   → WiFi + MQTT handling
 main/                  → BME280 logic
 License
 
-MIT (or choose your preferred license)
-
-
----
-
-If you want, I can also generate:
-
-- a small architecture diagram (Markdown + ASCII)
-- a CI workflow for GitHub Actions
-- a Home Assistant example screenshot section
-- or a more “portfolio-style” README for showcasing on GitHub
+MIT
