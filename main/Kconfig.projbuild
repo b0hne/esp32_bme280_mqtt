@@ -1,0 +1,39 @@
+menu "WiFi and MQTT Configuration"
+
+config WIFI_SSID
+    string "WiFi SSID"
+    default ""
+
+config WIFI_PASSWORD
+    string "WiFi Password"
+    default ""
+
+config MQTT_URI
+    string "MQTT Broker URI"
+    default "mqtt://homepi.fritz.box"
+
+config MQTT_USERNAME
+    string "MQTT Username"
+    default ""
+
+config MQTT_PASSWORD
+    string "MQTT Password"
+    default ""
+
+config MQTT_STATE_TOPIC
+    string "MQTT state topic (JSON)"
+    default "sensors/bme280"
+
+config DEVICE_NAME
+    string "Device name (used for HA discovery). Leave empty to use MAC-based name."
+    default ""
+
+config HA_DISCOVERY_ENABLE
+    bool "Enable Home Assistant MQTT Discovery"
+    default y
+
+config HA_DISCOVERY_PREFIX
+    string "Home Assistant discovery prefix"
+    default "homeassistant"
+
+endmenu
