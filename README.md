@@ -44,6 +44,7 @@ Example:
   "pressure": 1013.25,
   "humidity": 45.00
 }
+```
 
 Pressure is in hPa.
 
@@ -79,11 +80,13 @@ Select your target and generate configuration:
 idf.py set-target esp32c6
 idf.py reconfigure
 idf.py menuconfig
-
+```
 Build & Flash
 
+```bash
 idf.py build
 idf.py flash monitor
+```
 Home Assistant
 
 If discovery is enabled, sensors are created automatically under:
