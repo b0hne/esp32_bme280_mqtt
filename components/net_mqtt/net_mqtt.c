@@ -45,7 +45,7 @@ static void get_node_id(char *out, size_t out_len)
 
     uint8_t mac[6] = {0};
     esp_read_mac(mac, ESP_MAC_WIFI_STA);
-    snprintf(out, out_len, "stm32-bme280-%02X%02X%02X", mac[3], mac[4], mac[5]);
+    snprintf(out, out_len, "esp32-bme280-%02X%02X%02X", mac[3], mac[4], mac[5]);
 }
 
 static void ha_publish_discovery(void)
