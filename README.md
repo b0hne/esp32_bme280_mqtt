@@ -44,3 +44,63 @@ Example:
   "pressure": 1013.25,
   "humidity": 45.00
 }
+
+Pressure is in hPa.
+
+Configuration
+
+Run:
+
+idf.py menuconfig
+
+Set:
+
+WiFi and MQTT Configuration
+
+WiFi SSID
+
+WiFi password
+
+MQTT URI (example: mqtt://homepi.fritz.box)
+
+MQTT credentials (optional)
+
+MQTT state topic
+
+Home Assistant discovery enable
+
+Secrets are not committed (sdkconfig is ignored).
+
+Build & Flash
+idf.py build
+idf.py flash monitor
+Home Assistant
+
+If discovery is enabled, sensors are created automatically under:
+
+homeassistant/sensor/<device_id>_*/config
+
+Entities:
+
+Temperature
+
+Pressure
+
+Humidity
+
+Project Structure
+components/net_mqtt/   → WiFi + MQTT handling
+main/                  → BME280 logic
+License
+
+MIT (or choose your preferred license)
+
+
+---
+
+If you want, I can also generate:
+
+- a small architecture diagram (Markdown + ASCII)
+- a CI workflow for GitHub Actions
+- a Home Assistant example screenshot section
+- or a more “portfolio-style” README for showcasing on GitHub
